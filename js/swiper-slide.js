@@ -55,7 +55,7 @@ $(".sect04 .aside ul li").click(function () {
 
 var swiper05 = new Swiper(".m_slide", {
   pagination: {
-    el: ".swiper-pagination",
+    el: ".main-pagination",
     clickable: true,
   },
 });
