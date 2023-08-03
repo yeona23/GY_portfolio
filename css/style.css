@@ -544,6 +544,11 @@ section {
 /* --------------------------------------- */
 /* 360px */
 @media screen and (max-width: 689px) {
+  body {
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: fill-available;
+  }
   #wrap {
     display: none;
   }
