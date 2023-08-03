@@ -541,6 +541,8 @@ swiper05.on("slideChange", function () {
   }
 });
 
+//footer notification
+
 $("header nav ul li").on("click", function () {
   $(this).addClass("active").siblings().removeClass("active");
 });
@@ -559,4 +561,17 @@ $("footer .ft03 .icon_prev").click(function () {
 
 $("footer .ft03 .icon_next").click(function () {
   $(".part04_mslide .swiper-button-next").trigger("click");
+});
+
+//popup시 slide막기
+
+swiper08.on("slideChange", function () {
+  swiper05.allowSlideNext = false;
+  swiper05.allowSlidePrev = false;
+});
+
+// Swiper02의 슬라이드 이동이 끝났을 때, 다시 Swiper01의 슬라이드 이동을 허용
+swiper08.on("transitionEnd", function () {
+  swiper05.allowSlideNext = true;
+  swiper05.allowSlidePrev = true;
 });
