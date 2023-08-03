@@ -532,7 +532,7 @@ section {
   }
   #wrap02 {
     display: block;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background: var(--color04);
   }
   h1 {
@@ -1077,5 +1077,14 @@ section {
   .swiper-button-next,
   .swiper-button-prev {
     visibility: hidden;
+  }
+  :root {
+    --vh: 100%;
+  }
+
+  html,
+  body {
+    height: 100vh;
+    height: var(--vh);
   }
 }
