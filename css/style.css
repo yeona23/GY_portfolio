@@ -532,7 +532,8 @@ section {
   }
   #wrap02 {
     display: block;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background: var(--color04);
   }
   h1 {
@@ -544,7 +545,8 @@ section {
   header {
     border-bottom: 1px solid var(--color01);
     width: 100%;
-    height: 6.25vh;
+    min-height: 6.25vh;
+    min-height: -webkit-fill-available;
     padding: 0 16px;
     align-items: center;
     position: relative;
@@ -597,7 +599,8 @@ section {
     right: -100%;
     background: var(--color04);
     width: 80vw;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     border-left: 1px solid var(--color01);
     transition: all 0.8s;
     z-index: 10000;
@@ -607,7 +610,8 @@ section {
   }
   header .side_menu > div:nth-child(1) {
     width: 100%;
-    height: 6.25vh;
+    min-height: 6.25vh;
+    min-height: -webkit-fill-available;
     padding: 0 16px;
     align-items: center;
     border-bottom: 1px solid var(--color01);
@@ -651,7 +655,8 @@ section {
   }
   header nav {
     padding: 50px;
-    height: 50vh;
+    min-height: 50vh;
+    min-height: -webkit-fill-available;
   }
   header nav ul {
     height: 100%;
@@ -661,7 +666,8 @@ section {
   }
   main .m_slide {
     width: 100%;
-    height: 87.5vh;
+    min-height: 87.5vh;
+    min-height: -webkit-fill-available;
     position: relative;
   }
   main .m_slide .swiper-wrapper {
@@ -690,7 +696,8 @@ section {
     flex-direction: column;
   }
   main .part02 > div:nth-child(1) {
-    height: 18.75vh;
+    min-height: 18.75vh;
+    min-height: -webkit-fill-available;
     width: 100%;
     border-bottom: 1px solid var(--color01);
     z-index: 100;
@@ -704,7 +711,8 @@ section {
   main .part02 > div:nth-child(2) {
     position: relative;
     width: 100%;
-    height: 68.75vh;
+    min-height: 68.75vh;
+    min-height: -webkit-fill-available;
   }
   main .part02 .profile_popup {
     position: absolute;
@@ -788,7 +796,8 @@ section {
   }
   .sub_title {
     width: 100%;
-    height: 18.75vh;
+    min-height: 18.75vh;
+    min-height: -webkit-fill-available;
     border-bottom: 1px solid var(--color01);
     display: flex;
     flex-direction: column;
@@ -890,14 +899,52 @@ section {
   }
   .part03 .mobile .m_popup {
     display: none;
+    background: #fff;
   }
   .part03 .mobile .m_popup2 {
     display: none;
+    background: #fff;
   }
-  .part03 .mobile .popup_box05,
-  .part03 .mobile .popup_box08 {
+  .part03 .mobile .popup_box05 {
     width: 100%;
     aspect-ratio: 16/9;
+  }
+  .part03 .mobile .popup_box08 {
+    width: 98%;
+    height: 56.25vh;
+    overflow: hidden;
+    border: 1px solid var(--color01);
+  }
+  .part03 .mobile .popup_box08 .swiper-slide {
+    justify-content: center;
+    height: fit-content;
+    background: #fff;
+  }
+  .part03 .mobile .popup_box08 .swiper-slide img {
+    width: 70%;
+  }
+  .popup_box08 .swiper-scrollbar.swiper-scrollbar-vertical,
+  .swiper-vertical > .swiper-scrollbar {
+    right: var(--swiper-scrollbar-right, 10px);
+    width: var(--swiper-scrollbar-size, 3px);
+  }
+  .swiper-pagination-bullet {
+    width: var(
+      --swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 8px)
+    );
+    height: var(
+      --swiper-pagination-bullet-height,
+      var(--swiper-pagination-bullet-size, 8px)
+    );
+    display: inline-block;
+    border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+    background: #a75a5089 !important;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  }
+  .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #a75a50 !important;
   }
   .part03 .mobile .popup_box05 > div {
     width: inherit;
@@ -1006,6 +1053,15 @@ section {
     height: 100%;
   }
   footer .ft02 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+  }
+  footer .ft03 {
     display: flex;
     width: 100%;
     height: 100%;

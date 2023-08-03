@@ -60,7 +60,9 @@
   /* object-fit: cover; */
 }
 .sect03 .page-scroll .swiper-slide {
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   height: fit-content;
   background: #fff;
 }
