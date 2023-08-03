@@ -300,12 +300,6 @@ $(".pt01 ul li").click(function () {
 // $(window).scroll(function () {
 //   let Cscroll = $(this).scrollTop();
 // });
-let vh = 0;
-
-useEffect(() => {
-  vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-}, []);
 
 $("header .hamburger").click(function () {
   $("header .side_menu").addClass("show");
