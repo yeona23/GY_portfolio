@@ -84,4 +84,8 @@ var swiper08 = new Swiper(".part03 .m_popup", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
