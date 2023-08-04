@@ -14,6 +14,7 @@ font-family: 'Urbanist', sans-serif; */
   --color03: #a75a50;
   --color04: #fff;
   --color05: #a75a50;
+  --color06: #3b3b3d;
 }
 :root.dark {
   --color01: #f1ede2;
@@ -21,6 +22,7 @@ font-family: 'Urbanist', sans-serif; */
   --color03: #a75a50;
   --color04: #3b3b3d;
   --color05: #f1ede2;
+  --color06: #a75a50;
 }
 
 html {
@@ -323,8 +325,11 @@ section {
   z-index: 100;
   display: none;
 }
+.sect03 .aside span {
+  color: var(--color06);
+}
 .sect03 .aside span.active {
-  color: #a75a50;
+  color: var(--color05);
   text-decoration: underline;
   font-weight: 400;
 }
@@ -397,9 +402,10 @@ section {
   margin-bottom: 30px;
   text-transform: none;
   cursor: pointer;
+  color: var(--color06);
 }
 .sect04 .aside ul li.active {
-  color: #a75a50;
+  color: var(--color05);
   font-weight: 400;
   text-decoration: underline;
 }
@@ -524,6 +530,11 @@ section {
   margin: 0 18px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  visibility: hidden;
+}
+
 /* --------------------------------------- */
 /* 360px */
 @media screen and (max-width: 689px) {
@@ -539,7 +550,7 @@ section {
   }
   #wrap02 {
     display: block;
-    height: 100vh;
+    height: 100%;
     height: -webkit-fill-available;
     background: var(--color04);
   }
@@ -789,6 +800,10 @@ section {
   main .m_slide .profile_body .skill_slide img {
     margin-right: 16px;
   }
+  main .m_slide .profile_body .skill_slide img.dark {
+    filter: invert(91%) sepia(12%) saturate(172%) hue-rotate(352deg)
+      brightness(106%) contrast(89%);
+  }
   main .m_slide .profile_body .skill_slide img:last-child {
     margin: 0;
   }
@@ -814,8 +829,11 @@ section {
     height: 68.75vh;
     position: relative;
   }
+  .sub_title span {
+    color: var(--color06);
+  }
   .sub_title span.active {
-    color: #a75a50;
+    color: var(--color05);
     font-weight: 400;
     text-decoration: underline;
   }
@@ -950,6 +968,14 @@ section {
     width: inherit;
     height: 100%;
   }
+  .part03 .mobile .popup_box05 .btn_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 10000;
+    cursor: pointer;
+    width: 20px;
+  }
   .part03 .mobile iframe {
     width: 100%;
     height: 100%;
@@ -1072,16 +1098,22 @@ section {
   }
   .icon_prev,
   .icon_next {
-    filter: invert(43%) sepia(17%) saturate(1192%) hue-rotate(319deg)
-      brightness(92%) contrast(101%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 54px;
+    color: var(--color05);
+  }
+  .icon_prev img.dark,
+  .icon_next img.dark {
+    filter: invert(91%) sepia(12%) saturate(172%) hue-rotate(352deg)
+      brightness(106%) contrast(89%);
   }
   .icon_prev img,
   .icon_next img {
     width: 10px;
+    filter: invert(43%) sepia(17%) saturate(1192%) hue-rotate(319deg)
+      brightness(92%) contrast(101%);
   }
   .swiper-button-next,
   .swiper-button-prev {

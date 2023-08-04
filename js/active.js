@@ -39,7 +39,8 @@ $(".sect03-slide .swiper-slide:nth-child(4)").click(function () {
 });
 $(".sect03-slide .swiper-slide:nth-child(5)").click(function () {
   $(".wide").fadeIn();
-  $(".wide .popup_box05").fadeIn();
+  $(".wide .popup_box05").show();
+  // $(".wide .popup_box05").showVideo();
   $(".shadow").show();
 });
 $(".sect03-slide .swiper-slide:nth-child(6)").click(function () {
@@ -62,13 +63,12 @@ $(".btn_close").click(function () {
   $(".popup_box02").fadeOut();
   $(".popup_box03").fadeOut();
   $(".popup_box04").fadeOut();
-  $(".popup_box05").fadeOut();
+  $(".popup_box05").hide();
   $(".popup_box06").fadeOut();
   $(".popup_box07").fadeOut();
   $(".popup_box08").fadeOut();
   $(".shadow").hide();
   $("body").removeClass("notScroll");
-  $(".popup_box05").empty();
 });
 
 $(".shadow").on("click", function () {
@@ -76,41 +76,20 @@ $(".shadow").on("click", function () {
   $(".popup_box02").fadeOut();
   $(".popup_box03").fadeOut();
   $(".popup_box04").fadeOut();
-  $(".popup_box05").fadeOut();
+  $(".popup_box05").hide();
   $(".popup_box06").fadeOut();
   $(".popup_box07").fadeOut();
   $(".popup_box08").fadeOut();
   $(".shadow").hide();
-  $(".popup_box05").empty();
 });
 
 $(function () {
   $(".wide .popup_box05").on("click", function () {
-    let tpl = `
-    <div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/WFtP5rCwwHY"
-        title="YouTube video player"
-        frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-      <div>
-`;
-    $(".wide .popup_box05").append(tpl);
     $(".wide .popup_box05").show();
     $(".shadow").show();
   });
 });
 
-$(".shadow").mouseup(function (e) {
-  if ($(".popup_box05").has(e.target).length === 0) {
-    $(".popup_box05").fadeOut();
-    $(".shadow").fadeOut();
-  }
-});
 // SECTION03 pagination
 $(".sect03 .aside .all").on("click", function () {
   $(".sect03-slide .swiper-pagination-bullet:nth-child(1)").trigger("click");
@@ -316,18 +295,20 @@ $(".mode_btn div:nth-child(2)").on("click", function () {
   }
   if ($(this).hasClass("active") == true) {
     $("html").addClass("dark");
+    $("header .side_menu > div:nth-child(1) img").addClass("dark");
+    $("main .m_slide .part01 img").addClass("dark");
+    $("main .m_slide .profile_body .skill_slide img").addClass("dark");
+    $(".icon_prev img").addClass("dark");
+    $(".icon_next img").addClass("dark");
   } else {
     $("html").removeClass("dark");
-  }
-  if ($(this).hasClass("active") == true) {
-    $("header .side_menu > div:nth-child(1) img").addClass("dark");
-  } else {
     $("header .side_menu > div:nth-child(1) img").removeClass("dark");
-  }
-  if ($(this).hasClass("active") == true) {
-    $("main .m_slide .part01 img").addClass("dark");
-  } else {
     $("main .m_slide .part01 img").removeClass("dark");
+    $("main .m_slide .profile_body .skill_slide img").removeClass("dark");
+    $(".icon_prev img").removeClass("dark");
+    $(".icon_next img").removeClass("dark");
+  }
+  {
   }
 });
 
@@ -407,14 +388,43 @@ $(".btn_close").click(function () {
   $(".popup_box02").fadeOut();
   $(".popup_box03").fadeOut();
   $(".popup_box04").fadeOut();
-  $(".popup_box05").fadeOut();
+  $(".popup_box05").hide();
   $(".popup_box06").fadeOut();
   $(".popup_box07").fadeOut();
   $(".popup_box08").fadeOut();
   $(".shadow").hide();
   $("body").removeClass("notScroll");
-  // $(".popup_box05").empty();
 });
+
+let originalSrc = "";
+
+// div를 숨기고 iframe의 src 속성을 초기화하는 함수
+function hideAndReset() {
+  const videoDiv = document.getElementById("video-container");
+  const videoIframe = document.getElementById("video-iframe");
+
+  // 숨기기 전에 현재 iframe의 src 속성을 저장합니다.
+  originalSrc = videoIframe.src;
+
+  // iframe의 src 속성을 빈 문자열로 변경하여 미디어를 정지시킵니다.
+  videoIframe.src = "";
+
+  // div를 숨깁니다.
+  videoDiv.style.display = "none";
+}
+
+// div를 다시 표시하고 iframe의 src 속성을 복원하는 함수
+function showVideo() {
+  const videoDiv = document.getElementById("video-container");
+  const videoIframe = document.getElementById("video-iframe");
+
+  // div를 다시 표시합니다.
+  videoDiv.style.display = "block";
+
+  // iframe의 src 속성을 원래 값으로 복원하여 미디어를 재생합니다.
+  videoIframe.src = originalSrc;
+}
+
 // part03 notification
 $(".part03 .icon_prev").click(function () {
   $(".part03 .part03_mslide .swiper-button-prev").trigger("click");
@@ -563,15 +573,110 @@ $("footer .ft03 .icon_next").click(function () {
   $(".part04_mslide .swiper-button-next").trigger("click");
 });
 
-//popup시 slide막기
+// swiper08.on("slideChange", function () {
+//   swiper05.allowSlideNext = false;
+//   swiper05.allowSlidePrev = false;
+// });
 
-swiper08.on("slideChange", function () {
-  swiper05.allowSlideNext = false;
-  swiper05.allowSlidePrev = false;
+// swiper08.on("transitionEnd", function () {
+//   swiper05.allowSlideNext = true;
+//   swiper05.allowSlidePrev = true;
+// });
+swiper06.on("slideChange", function () {
+  $(".part03 .sub_title span").removeClass("active");
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:first-child").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(1)").addClass("active");
+    $(".part03 .sub_title span:nth-child(2)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(2)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(2)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(3)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(3)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(4)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(4)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(5)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(5)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(6)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(6)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(7)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(7)").addClass("active");
+  }
+  if (
+    $(".part03_mslide .swiper-pagination-bullet:nth-child(8)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part03 .sub_title span:nth-child(8)").addClass("active");
+  }
 });
 
-// Swiper02의 슬라이드 이동이 끝났을 때, 다시 Swiper01의 슬라이드 이동을 허용
-swiper08.on("transitionEnd", function () {
-  swiper05.allowSlideNext = true;
-  swiper05.allowSlidePrev = true;
+swiper07.on("slideChange", function () {
+  $(".part04 .sub_title span").removeClass("active");
+  if (
+    $(".part04_mslide .swiper-pagination-bullet:first-child").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part04 .sub_title span:nth-child(1)").addClass("active");
+  }
+  if (
+    $(".part04_mslide .swiper-pagination-bullet:nth-child(2)").hasClass(
+      "swiper-pagination-bullet-active"
+    )
+  ) {
+    $(".part04 .sub_title span:nth-child(2)").addClass("active");
+  }
 });
+
+const totalPages = 3;
+let currentPage = 1;
+
+// 페이지번호매기기
+window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY;
+
+  const newPage = Math.ceil(scrollPosition / window.innerHeight);
+
+  if (newPage !== currentPage) {
+    currentPage = newPage;
+    updatePageNumber();
+    console.log("Current Page:", currentPage);
+  }
+});
+function updatePageNumber() {
+  const pageNumberElement = document.getElementById("pageNumber");
+  pageNumberElement.textContent = `Page ${currentPage + 1}`;
+}
