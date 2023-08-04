@@ -300,6 +300,8 @@ $(".mode_btn div:nth-child(2)").on("click", function () {
     $("main .m_slide .profile_body .skill_slide img").addClass("dark");
     $(".icon_prev img").addClass("dark");
     $(".icon_next img").addClass("dark");
+    $(".part03 .mobile .popup_box05 .btn_close img").addClass("dark");
+    $("main .m_slide .profile_popup .close_btn").addClass("dark");
   } else {
     $("html").removeClass("dark");
     $("header .side_menu > div:nth-child(1) img").removeClass("dark");
@@ -307,8 +309,8 @@ $(".mode_btn div:nth-child(2)").on("click", function () {
     $("main .m_slide .profile_body .skill_slide img").removeClass("dark");
     $(".icon_prev img").removeClass("dark");
     $(".icon_next img").removeClass("dark");
-  }
-  {
+    $(".part03 .mobile .popup_box05 .btn_close img").removeClass("dark");
+    $("main .m_slide .profile_popup .close_btn").removeClass("dark");
   }
 });
 
@@ -396,7 +398,7 @@ $(".btn_close").click(function () {
   $("body").removeClass("notScroll");
 });
 
-let originalSrc = "";
+let originalSrc = "https://www.youtube.com/embed/WFtP5rCwwHY";
 
 // div를 숨기고 iframe의 src 속성을 초기화하는 함수
 function hideAndReset() {
