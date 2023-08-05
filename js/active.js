@@ -398,35 +398,6 @@ $(".btn_close").click(function () {
   $("body").removeClass("notScroll");
 });
 
-let originalSrc = "https://www.youtube.com/embed/WFtP5rCwwHY";
-
-// div를 숨기고 iframe의 src 속성을 초기화하는 함수
-function hideAndReset() {
-  const videoDiv = document.getElementById("video-container");
-  const videoIframe = document.getElementById("video-iframe");
-
-  // 숨기기 전에 현재 iframe의 src 속성을 저장합니다.
-  originalSrc = videoIframe.src;
-
-  // iframe의 src 속성을 빈 문자열로 변경하여 미디어를 정지시킵니다.
-  videoIframe.src = "";
-
-  // div를 숨깁니다.
-  videoDiv.style.display = "none";
-}
-
-// div를 다시 표시하고 iframe의 src 속성을 복원하는 함수
-function showVideo() {
-  const videoDiv = document.getElementById("video-container");
-  const videoIframe = document.getElementById("video-iframe");
-
-  // div를 다시 표시합니다.
-  videoDiv.style.display = "block";
-
-  // iframe의 src 속성을 원래 값으로 복원하여 미디어를 재생합니다.
-  videoIframe.src = originalSrc;
-}
-
 // part03 notification
 $(".part03 .icon_prev").click(function () {
   $(".part03 .part03_mslide .swiper-button-prev").trigger("click");
@@ -681,4 +652,61 @@ window.addEventListener("scroll", function () {
 function updatePageNumber() {
   const pageNumberElement = document.getElementById("pageNumber");
   pageNumberElement.textContent = `Page ${currentPage + 1}`;
+}
+
+// $(".mobile .pop_box05 .btn_close").on("click", function () {
+//   let originalSrc = " ";
+//   $(".mobile .pop_box05").hideAndReset();
+// });
+// let originalSrc = " ";
+// // div를 숨기고 iframe의 src 속성을 초기화하는 함수
+// function hideAndReset() {
+//   const videoDiv = document.getElementById("video-container");
+//   const videoIframe = document.getElementById("video-iframe");
+
+//   // 숨기기 전에 현재 iframe의 src 속성을 저장합니다.
+//   originalSrc = videoIframe.src;
+
+//   // iframe의 src 속성을 빈 문자열로 변경하여 미디어를 정지시킵니다.
+//   videoIframe.src = "";
+
+//   // div를 숨깁니다.
+//   videoDiv.style.display = "none";
+// }
+
+// $(".part03-mslide .swiper-slide:nth-child(5)").on("click", function () {
+//   let originalSrc = " ";
+//   $(".mobile .pop_box05").showVideo();
+// });
+// function showVideo() {
+//   const videoDiv = document.getElementById("video-container");
+//   const videoIframe = document.getElementById("video-iframe");
+
+//   // div를 다시 표시합니다.
+//   videoDiv.style.display = "block";
+
+//   // iframe의 src 속성을 원래 값으로 복원하여 미디어를 재생합니다.
+//   videoIframe.src = originalSrc;
+// }
+
+function showVideoPopup() {
+  const videoPopup = document.getElementById("video-popup");
+  const videoIframe = videoPopup.querySelector("#video-iframe");
+
+  // iframe의 src를 변경하여 비디오를 표시합니다.
+  videoIframe.src = "https://www.youtube.com/embed/WFtP5rCwwHY";
+
+  // 팝업을 표시합니다.
+  videoPopup.style.display = "block";
+}
+
+function hideVideoPopup() {
+  const videoPopup = document.getElementById("video-popup");
+  const videoIframe = videoPopup.querySelector("#video-iframe");
+
+  // iframe의 src를 비워서 비디오를 정지시킵니다.
+  videoIframe.src = "";
+
+  // 팝업을 숨깁니다.
+  videoPopup.style.display = "none";
 }
