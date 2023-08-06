@@ -708,7 +708,7 @@ function setDynamicHeight() {
   const element = document.querySelector(".dynamic-height-element"); // 요소 선택
 
   // 뷰포트 높이의 절반으로 요소의 높이 설정
-  element.style.height = `${viewportHeight * 0.99}px`;
+  element.style.height = `${viewportHeight / 1.01}px`;
 }
 
 // 초기 로드 시 요소의 높이 설정
