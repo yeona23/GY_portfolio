@@ -692,21 +692,27 @@ function updatePageNumber() {
 function showVideoPopup() {
   const videoPopup = document.getElementById("video-popup");
   const videoIframe = videoPopup.querySelector("#video-iframe");
-
-  // iframe의 src를 변경하여 비디오를 표시합니다.
   videoIframe.src = "https://www.youtube.com/embed/WFtP5rCwwHY";
-
-  // 팝업을 표시합니다.
   videoPopup.style.display = "block";
 }
 
 function hideVideoPopup() {
   const videoPopup = document.getElementById("video-popup");
   const videoIframe = videoPopup.querySelector("#video-iframe");
-
-  // iframe의 src를 비워서 비디오를 정지시킵니다.
   videoIframe.src = "";
-
-  // 팝업을 숨깁니다.
   videoPopup.style.display = "none";
 }
+
+function setDynamicHeight() {
+  const viewportHeight = window.innerHeight; // 뷰포트의 높이
+  const element = document.querySelector(".dynamic-height-element"); // 요소 선택
+
+  // 뷰포트 높이의 절반으로 요소의 높이 설정
+  element.style.height = `${viewportHeight / 2}px`;
+}
+
+// 초기 로드 시 요소의 높이 설정
+window.addEventListener("load", setDynamicHeight);
+
+// 뷰포트 크기 변경 시 요소의 높이 재설정
+window.addEventListener("resize", setDynamicHeight);
