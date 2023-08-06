@@ -693,11 +693,6 @@ section {
     justify-content: center;
     align-items: center;
   }
-  main .m_slide .part01 {
-    height: 680px;
-    /* height: inherit; */
-    max-height: inherit;
-  }
   main .part01 {
     z-index: 100;
     background: var(--color04);
