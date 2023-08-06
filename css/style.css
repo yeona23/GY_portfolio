@@ -538,20 +538,20 @@ section {
 /* --------------------------------------- */
 /* 360px */
 @media screen and (max-width: 689px) {
-  /* html {
+  html {
     height: -webkit-fill-available;
   }
   body {
     height: 100vh;
     height: -webkit-fill-available;
-  } */
+  }
   #wrap {
     display: none;
   }
   #wrap02 {
     display: block;
     height: 100%;
-    /* height: -webkit-fill-available; */
+    height: -webkit-fill-available;
     background: var(--color04);
   }
   h1 {
@@ -740,9 +740,11 @@ section {
     transition: all 0.8s;
     border-right: 1px solid var(--color01);
     z-index: 10;
+    opacity: 0;
   }
   main .part02 .profile_popup.show {
     left: 0%;
+    opacity: 1;
   }
   main .part02 .profile_popup div:nth-child(1) {
     height: 63%;
@@ -814,6 +816,7 @@ section {
   }
   main .m_slide .main-pagination {
     visibility: hidden;
+    display: none;
   }
   .sub_title {
     width: 100%;
