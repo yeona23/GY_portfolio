@@ -702,17 +702,3 @@ function hideVideoPopup() {
   videoIframe.src = "";
   videoPopup.style.display = "none";
 }
-
-function setDynamicHeight() {
-  const viewportHeight = window.innerHeight; // 뷰포트의 높이
-  const element = document.querySelector(".dynamic-height-element"); // 요소 선택
-
-  // 뷰포트 높이의 절반으로 요소의 높이 설정
-  element.style.height = `${viewportHeight / 1.01}px`;
-}
-
-// 초기 로드 시 요소의 높이 설정
-window.addEventListener("load", setDynamicHeight);
-
-// 뷰포트 크기 변경 시 요소의 높이 재설정
-window.addEventListener("resize", setDynamicHeight);
