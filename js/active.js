@@ -654,41 +654,7 @@ function updatePageNumber() {
   pageNumberElement.textContent = `Page ${currentPage + 1}`;
 }
 
-// $(".mobile .pop_box05 .btn_close").on("click", function () {
-//   let originalSrc = " ";
-//   $(".mobile .pop_box05").hideAndReset();
-// });
-// let originalSrc = " ";
-// // div를 숨기고 iframe의 src 속성을 초기화하는 함수
-// function hideAndReset() {
-//   const videoDiv = document.getElementById("video-container");
-//   const videoIframe = document.getElementById("video-iframe");
-
-//   // 숨기기 전에 현재 iframe의 src 속성을 저장합니다.
-//   originalSrc = videoIframe.src;
-
-//   // iframe의 src 속성을 빈 문자열로 변경하여 미디어를 정지시킵니다.
-//   videoIframe.src = "";
-
-//   // div를 숨깁니다.
-//   videoDiv.style.display = "none";
-// }
-
-// $(".part03-mslide .swiper-slide:nth-child(5)").on("click", function () {
-//   let originalSrc = " ";
-//   $(".mobile .pop_box05").showVideo();
-// });
-// function showVideo() {
-//   const videoDiv = document.getElementById("video-container");
-//   const videoIframe = document.getElementById("video-iframe");
-
-//   // div를 다시 표시합니다.
-//   videoDiv.style.display = "block";
-
-//   // iframe의 src 속성을 원래 값으로 복원하여 미디어를 재생합니다.
-//   videoIframe.src = originalSrc;
-// }
-
+//비디오 팝업 초기화
 function showVideoPopup() {
   const videoPopup = document.getElementById("video-popup");
   const videoIframe = videoPopup.querySelector("#video-iframe");

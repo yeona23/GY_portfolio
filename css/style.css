@@ -33,8 +33,6 @@ html {
   overflow: hidden;
 }
 #wrap02 {
-  width: 100%;
-  overflow: hidden;
   display: none;
 }
 .hor {
@@ -538,20 +536,20 @@ section {
 /* --------------------------------------- */
 /* 360px */
 @media screen and (max-width: 689px) {
-  html {
+  /* html {
     height: -webkit-fill-available;
   }
   body {
     height: 100vh;
     height: -webkit-fill-available;
-  }
+  } */
   #wrap {
     display: none;
   }
   #wrap02 {
     display: block;
     height: 100vh;
-    height: -webkit-fill-available;
+    /* height: -webkit-fill-available; */
     background: var(--color04);
   }
   h1 {
@@ -707,7 +705,47 @@ section {
     filter: invert(91%) sepia(12%) saturate(172%) hue-rotate(352deg)
       brightness(106%) contrast(89%);
   }
+  main .part01 > div {
+    width: 100vw;
+    height: 6.25vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+  }
+  main .part01 .icon_flip {
+    position: relative;
+    animation: arr_slide 4s infinite;
+  }
+  @keyframes arr_slide {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    100% {
+      left: 100%;
+      opacity: 1;
+    }
+  }
 
+  main .part01 .icon_flip span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color01);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform-origin: 100% 0;
+  }
+  main .part01 .icon_flip span:nth-child(1) {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  main .part01 .icon_flip span:nth-child(2) {
+    transform: translateY(-50%) rotate(45deg);
+  }
   main .part02 {
     flex-direction: column;
   }
