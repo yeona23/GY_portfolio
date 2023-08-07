@@ -662,20 +662,28 @@ function showVideoPopup() {
   videoPopup.style.display = "block";
 }
 
-function hideVideoPopup() {
-  const videoPopup = document.getElementById("video-popup");
+function showVideoPopup2() {
+  const videoPopup = document.getElementById("video-container");
   const videoIframe = videoPopup.querySelector("#video-iframe");
-  videoIframe.src = "";
-  videoPopup.style.display = "none";
+  videoIframe.src = "https://www.youtube.com/embed/WFtP5rCwwHY";
+  videoPopup.style.display = "block";
 }
 
 function hideVideoPopup() {
+  const videoPopup = document.getElementById("video-popup");
+  const videoIframe = videoPopup.querySelector("#video-iframe");
+  videoIframe.src = " ";
+  videoPopup.style.display = "none";
+  setTimeout(function () {
+    videoIframe.src = "https://www.youtube.com/embed/WFtP5rCwwHY";
+  }, 500); // 500ms 후에 다시 로드합니다.
+}
+function hideVideoPopup2() {
   const videoPopup = document.getElementById("video-container");
   const videoIframe = videoPopup.querySelector("#video-iframe");
-
-  // iframe을 숨깁니다.
+  videoIframe.src = " ";
   videoPopup.style.display = "none";
-
-  // iframe의 src를 비워서 비디오를 정지시킵니다.
-  videoIframe.src = "";
+  setTimeout(function () {
+    videoIframe.src = "https://www.youtube.com/embed/WFtP5rCwwHY";
+  }, 500); // 500ms 후에 다시 로드합니다.
 }

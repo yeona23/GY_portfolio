@@ -777,11 +777,9 @@ section {
     transition: all 0.8s;
     border-right: 1px solid var(--color01);
     z-index: 10;
-    opacity: 0;
   }
   main .part02 .profile_popup.show {
     left: 0%;
-    opacity: 1;
   }
   main .part02 .profile_popup div:nth-child(1) {
     height: 63%;
