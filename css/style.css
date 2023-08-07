@@ -412,18 +412,9 @@ section {
   justify-content: center;
   align-items: center;
 }
-.sect04 .swiper-slide:nth-child(1) {
+.sect04 .swiper-slide .lab {
   position: relative;
 }
-/* .sect04 .swiper-slide:nth-child(1) img:nth-child(1) {
-  
-  background-image: image(
-    "sadaharu_aoki\(full_screenshot\).png"xywh=111px,
-    45px,
-    100,
-    200
-  );
-} */
 .sect04 .swiper-slide:nth-child(1) .labtop_bg {
   position: absolute;
   left: 210px;
@@ -534,6 +525,72 @@ section {
 }
 
 /* --------------------------------------- */
+/* 1440px */
+@media screen and (max-width: 1440px) {
+  .logo img:nth-child(2) {
+    width: 80%;
+  }
+  .sect02 .pt02 > div:nth-child(2) > div:nth-child(1) {
+    height: 90%;
+    font-size: 20px;
+  }
+  .sect02 .profile_body img {
+    width: 95%;
+  }
+  .sect03-slide {
+    padding: 0 10px !important;
+  }
+  .sect03 .swiper-slide div:nth-child(1) {
+    width: 370px !important;
+  }
+  .sect04 .sect04-slide .swiper-slide {
+    padding: 0 70px;
+  }
+  .sect04 .swiper-slide img:nth-child(1) {
+    width: 835px !important;
+    left: 113px !important;
+    bottom: -561px;
+  }
+  .sect04 .swiper-slide:nth-child(1) .labtop_bg {
+    position: absolute;
+    left: 207px;
+    top: 101px;
+    width: 650px;
+    height: 408px;
+    z-index: 100;
+    background: url(../IMAGE/sadaharu_aoki\(full_screenshot\).png) no-repeat;
+    background-size: 100%;
+    animation: scroll01 16s infinite linear alternate;
+  }
+  @keyframes scroll01 {
+    0% {
+      background-position-y: 10px;
+    }
+    100% {
+      background-position-y: -2782px;
+    }
+  }
+  .sect04 .swiper-slide:nth-child(2) .labtop_bg {
+    position: absolute;
+    left: 205px;
+    top: 101px;
+    width: 650px;
+    height: 408px;
+    z-index: 100;
+    background: url(../IMAGE/bma\(full_screenshot\).png) no-repeat;
+    background-size: 100%;
+    /* background-color: #fff; */
+    animation: scroll03 10s infinite linear alternate;
+  }
+  @keyframes scroll03 {
+    0% {
+      background-position-y: 30px;
+    }
+    100% {
+      background-position-y: -1197px;
+    }
+  }
+}
 /* 360px */
 @media screen and (max-width: 689px) {
   body {

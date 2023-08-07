@@ -107,7 +107,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.sect04 .swiper-slide div:nth-child(1) {
+.sect04 .swiper-slide > div:nth-child(1) {
   position: relative;
   width: 100%;
   height: 567px;
@@ -115,7 +115,7 @@
 .sect04 .swiper-slide img:nth-child(1) {
   width: 980px;
   position: absolute;
-  right: 0%;
+  left: 100px;
 }
 .sect04 .swiper-slide img:nth-child(2) {
   width: 205px;
@@ -134,7 +134,7 @@
   align-items: center;
 }
 
-.sect04 .swiper-slide div:nth-child(2) {
+.sect04 .swiper-slide > div:nth-child(2) {
   margin-top: 50px;
   background: var(--color04);
   border: 1px solid #a75a50;
@@ -150,7 +150,7 @@
   width: 100%;
   height: 100%;
 }
-.sect04 .swiper-slide div:nth-child(2):hover {
+.sect04 .swiper-slide > div:nth-child(2):hover {
   background: #a75a50;
   color: #f1ede2;
 }
