@@ -536,21 +536,18 @@ section {
 /* --------------------------------------- */
 /* 360px */
 @media screen and (max-width: 689px) {
-  /* html {
-    height: -webkit-fill-available;
-  }
   body {
     height: 100vh;
     height: -webkit-fill-available;
-  } */
+  }
   #wrap {
     display: none;
   }
   #wrap02 {
     display: block;
     height: 100vh;
-    /* height: -webkit-fill-available; */
     background: var(--color04);
+    overflow: hidden;
   }
   h1 {
     font-size: 48px;
