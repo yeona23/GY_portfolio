@@ -668,3 +668,14 @@ function hideVideoPopup() {
   videoIframe.src = "";
   videoPopup.style.display = "none";
 }
+
+function hideVideoPopup() {
+  const videoPopup = document.getElementById("video-container");
+  const videoIframe = videoPopup.querySelector("#video-iframe");
+
+  // iframe을 숨깁니다.
+  videoPopup.style.display = "none";
+
+  // iframe의 src를 비워서 비디오를 정지시킵니다.
+  videoIframe.src = "";
+}
