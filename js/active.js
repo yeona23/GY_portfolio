@@ -130,14 +130,20 @@ swiper02.on("slideChange", function () {
       "swiper-pagination-bullet-active"
     )
   ) {
-    $(".sect04 .aside .sadaharu").addClass("active");
+    $(".sect04 .aside .sadaharu")
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
   }
   if (
     $(".swiper-pagination-bullet:nth-child(2)").hasClass(
       "swiper-pagination-bullet-active"
     )
   ) {
-    $(".sect04 .aside .bma").addClass("active");
+    $(".sect04 .aside .bma")
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
   }
 });
 

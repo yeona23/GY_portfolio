@@ -190,8 +190,8 @@ section {
 .mode span:nth-child(1) {
   display: block;
   width: 4.5vw;
-  height: 5px;
-  border-radius: 5px;
+  height: 7px;
+  /* border-radius: 5px; */
   background-color: #a75a50;
   position: absolute;
   top: 0%;
@@ -206,8 +206,8 @@ section {
 .mode span:nth-child(2) {
   display: block;
   width: 9vw;
-  height: 5px;
-  border-radius: 5px;
+  height: 7px;
+  /* border-radius: 5px; */
   background-color: #a75a5075;
 }
 .num {
