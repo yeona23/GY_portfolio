@@ -695,14 +695,14 @@ function hideVideoPopup2() {
 }
 
 window.addEventListener("load", () => {
-  updateVH();
+  adjustHeight();
 });
 
-// vh 값을 업데이트하는 함수
-function updateVH() {
+window.addEventListener("resize", () => {
+  adjustHeight();
+});
+
+function adjustHeight() {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 }
-
-// 리사이즈 이벤트 감지 시 vh 값을 업데이트
-window.addEventListener("resize", updateVH);

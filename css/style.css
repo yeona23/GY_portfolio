@@ -606,6 +606,11 @@ section {
     background: var(--color04);
     overflow: hidden;
   }
+  #wrap02 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
   h1 {
     font-size: 48px;
     font-family: "Red Hat Display", sans-serif;
@@ -751,6 +756,7 @@ section {
   main .part01 {
     z-index: 100;
     background: var(--color04);
+    height: var(--vh, 1vh);
   }
   main .m_slide .part01 img {
     width: 85vw;
