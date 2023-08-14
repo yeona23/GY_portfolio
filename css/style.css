@@ -756,7 +756,6 @@ section {
   main .part01 {
     z-index: 100;
     background: var(--color04);
-    height: var(--vh, 1vh);
   }
   main .m_slide .part01 img {
     width: 85vw;

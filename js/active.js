@@ -147,36 +147,6 @@ swiper02.on("slideChange", function () {
   }
 });
 
-window.addEventListener(
-  "wheel",
-  function (e) {
-    e.preventDefault();
-  },
-  { passive: false }
-);
-var $html = $("html");
-var page = 1;
-var lastPage = $(".content").length;
-
-$html.animate({ scrollTop: 0 }, 1000);
-
-$(window).on("wheel", function (e) {
-  if ($html.is(":animated")) return;
-
-  if (e.originalEvent.deltaY > 0) {
-    if (page == lastPage) return;
-
-    page++;
-  } else if (e.originalEvent.deltaY < 0) {
-    if (page == 1) return;
-
-    page--;
-  }
-  var posTop = (page - 1) * $(window).height();
-
-  $html.animate({ scrollTop: posTop });
-});
-
 $(document).ready(function () {
   $(".back").click(function () {
     var offset = $(".sect01").offset();
@@ -694,15 +664,56 @@ function hideVideoPopup2() {
   }, 500); // 500ms 후에 다시 로드합니다.
 }
 
-window.addEventListener("load", () => {
-  adjustHeight();
+// window.addEventListener("load", () => {
+//   adjustHeight();
+// });
+
+// window.addEventListener("resize", () => {
+//   adjustHeight();
+// });
+
+// function adjustHeight() {
+//   const vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty("--vh", `${vh}px`);
+// }
+
+var $html = $("html, body");
+var page = 1;
+var lastPage = 5;
+
+$(window).on("wheel touchstart touchmove touchend", function (e) {
+  if ($html.is(":animated")) return;
+
+  if (e.type === "touchstart") {
+    startY = e.originalEvent.touches[0].pageY;
+  } else if (e.type === "touchmove") {
+    var moveY = e.originalEvent.touches[0].pageY;
+    if (moveY - startY > 100) {
+      if (page == 1) return;
+      page--;
+      animateScroll();
+    } else if (startY - moveY > 100) {
+      if (page == lastPage) return;
+      page++;
+      animateScroll();
+    }
+  } else if (e.type === "touchend") {
+    startY = null;
+  }
+
+  if (e.type === "wheel") {
+    if (e.originalEvent.deltaY > 0) {
+      if (page == lastPage) return;
+      page++;
+    } else if (e.originalEvent.deltaY < 0) {
+      if (page == 1) return;
+      page--;
+    }
+    animateScroll();
+  }
 });
 
-window.addEventListener("resize", () => {
-  adjustHeight();
-});
-
-function adjustHeight() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
+function animateScroll() {
+  var posTop = (page - 1) * $(window).height();
+  $html.animate({ scrollTop: posTop });
 }
