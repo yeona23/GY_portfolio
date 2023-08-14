@@ -694,7 +694,15 @@ function hideVideoPopup2() {
   }, 500); // 500ms 후에 다시 로드합니다.
 }
 
-window.addEventListener("scroll", () => {
+window.addEventListener("load", () => {
+  updateVH();
+});
+
+// vh 값을 업데이트하는 함수
+function updateVH() {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
-});
+}
+
+// 리사이즈 이벤트 감지 시 vh 값을 업데이트
+window.addEventListener("resize", updateVH);
