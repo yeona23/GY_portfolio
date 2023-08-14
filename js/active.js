@@ -693,3 +693,8 @@ function hideVideoPopup2() {
     videoIframe.src = "https://www.youtube.com/embed/WFtP5rCwwHY";
   }, 500); // 500ms 후에 다시 로드합니다.
 }
+
+window.addEventListener("scroll", () => {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
