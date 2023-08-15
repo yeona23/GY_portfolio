@@ -602,14 +602,9 @@ section {
   }
   #wrap02 {
     display: block;
-    height: 100vh;
+    height: 94.5vh;
     background: var(--color04);
     overflow: hidden;
-  }
-  #wrap02 {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
   }
   h1 {
     font-size: 48px;
