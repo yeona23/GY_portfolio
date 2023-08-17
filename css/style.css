@@ -605,6 +605,7 @@ section {
     height: 94.5vh;
     background: var(--color04);
     overflow: hidden;
+    border-bottom: 1px solid #3b3b3d;
   }
   h1 {
     font-size: 48px;
