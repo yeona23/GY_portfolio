@@ -356,12 +356,12 @@ section {
 .sect03 .wide .w_popup2 {
   display: none;
 }
-.sect03 .wide .popup_box05,
+.sect03 .wide .popup_box03,
 .sect03 .wide .popup_box08 {
   width: 100%;
   aspect-ratio: 16/9;
 }
-.sect03 .wide .popup_box05 > div {
+.sect03 .wide .popup_box03 > div {
   width: inherit;
   height: 100%;
 }

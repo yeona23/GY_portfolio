@@ -191,21 +191,19 @@
               </div>
               <div>
                 <p>
-                  <span class="all active">#ALL</span>&nbsp;&nbsp;&nbsp;&nbsp;/
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="ad"
-                    >#AD(poster, banner)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/ <br />
-                  &nbsp;<span class="leaflet">#leaflet(exhibition)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;<span class="character"
+                  <span class="all active">#ALL</span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;<span class="character"
                     >#character</span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;/<span class="logo_layout"
+                    >#LOGO(yeon)</span
                   >&nbsp;&nbsp;&nbsp;&nbsp;/<br />
                   <span class="motion">#Motion graphic(J-hope)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/<br />
-                  <span class="logo_layout">#LOGO(yeon)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    class="pakage"
-                    >#pakage(호미곶)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/<br />
+                  >&nbsp;&nbsp;&nbsp;&nbsp;/<br /><span class="ad"
+                    >#AD(poster, banner)</span
+                  >&nbsp;&nbsp;&nbsp;/<br />&nbsp;<span class="leaflet"
+                    >#leaflet(exhibition)</span
+                  >/<br /><span class="pakage">#pakage(호미곶)</span
+                  >&nbsp;&nbsp;&nbsp;/
                   <span class="page">#product detail page</span>
                 </p>
               </div>
@@ -214,6 +212,20 @@
           <div>
             <div class="sect03-slide swiper">
               <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div><img src="./IMAGE/sect03_04.gif" alt="hobak" /></div>
+                  <div><p>자세히보기</p></div>
+                </div>
+                <div class="swiper-slide">
+                  <div><img src="./IMAGE/sect03_06.png" alt="logo" /></div>
+                  <div><p>자세히보기</p></div>
+                </div>
+                <div onclick="showVideoPopup()" class="swiper-slide">
+                  <div>
+                    <img src="./IMAGE/sect03_05.png" alt="onthestreet" />
+                  </div>
+                  <div><p>자세히보기</p></div>
+                </div>
                 <div class="swiper-slide">
                   <div>
                     <img src="./IMAGE/sect03_01.png" alt="miss_dior" />
@@ -228,20 +240,6 @@
                   <div>
                     <img src="./IMAGE/sect03_03.png" alt="exhibition" />
                   </div>
-                  <div><p>자세히보기</p></div>
-                </div>
-                <div class="swiper-slide">
-                  <div><img src="./IMAGE/sect03_04.gif" alt="hobak" /></div>
-                  <div><p>자세히보기</p></div>
-                </div>
-                <div onclick="showVideoPopup()" class="swiper-slide">
-                  <div>
-                    <img src="./IMAGE/sect03_05.png" alt="onthestreet" />
-                  </div>
-                  <div><p>자세히보기</p></div>
-                </div>
-                <div class="swiper-slide">
-                  <div><img src="./IMAGE/sect03_06.png" alt="logo" /></div>
                   <div><p>자세히보기</p></div>
                 </div>
                 <div class="swiper-slide">
@@ -264,54 +262,6 @@
             <!-- WIDE POPUP -->
             <div class="wide">
               <div class="popup_box01 w_popup">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="./IMAGE/dior layout01.jpg" alt="w_dior01" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./IMAGE/dior layout01.jpg" alt="w_dior02" />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="btn_close">
-                  <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                </div>
-              </div>
-              <div class="popup_box02 w_popup">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="./IMAGE/Sakari layout 01.jpg" alt="w_sakari01" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./IMAGE/Sakari layout 02.jpg" alt="w_sakari02" />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="btn_close">
-                  <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                </div>
-              </div>
-              <div class="popup_box03 w_popup">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="./IMAGE/exhibition layout01.jpg"
-                      alt="w_exhibition01"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./IMAGE/exhibition layout02.jpg"
-                      alt="w_exhibition02"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="btn_close">
-                  <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                </div>
-              </div>
-              <div class="popup_box04 w_popup">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img
@@ -349,21 +299,7 @@
                   <img src="./IMAGE/icon_close.svg" alt="btn_close" />
                 </div>
               </div>
-              <div id="video-popup" class="popup_box05 w_popup2">
-                <div>
-                  <iframe
-                    id="video-iframe"
-                    width="560"
-                    height="315"
-                    src=" "
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div class="popup_box06 w_popup">
+              <div class="popup_box02 w_popup">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img
@@ -407,6 +343,69 @@
                   <img src="./IMAGE/icon_close.svg" alt="btn_close" />
                 </div>
               </div>
+              <div id="video-popup" class="popup_box03 w_popup2">
+                <div>
+                  <iframe
+                    id="video-iframe"
+                    width="560"
+                    height="315"
+                    src=" "
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="popup_box04 w_popup">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./IMAGE/dior layout01.jpg" alt="w_dior01" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./IMAGE/dior layout01.jpg" alt="w_dior02" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="btn_close">
+                  <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                </div>
+              </div>
+              <div class="popup_box05 w_popup">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./IMAGE/Sakari layout 01.jpg" alt="w_sakari01" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./IMAGE/Sakari layout 02.jpg" alt="w_sakari02" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="btn_close">
+                  <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                </div>
+              </div>
+              <div class="popup_box06 w_popup">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./IMAGE/exhibition layout01.jpg"
+                      alt="w_exhibition01"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./IMAGE/exhibition layout02.jpg"
+                      alt="w_exhibition02"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="btn_close">
+                  <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                </div>
+              </div>
+
               <div class="popup_box07 w_popup">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -687,16 +686,16 @@
                 <h1>DESIGN</h1>
                 <p>
                   <span class="all active">#ALL</span>&nbsp;&nbsp;&nbsp;&nbsp;/
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="ad"
+                  &nbsp;&nbsp;<span class="character">#character</span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;/
+                  <span class="logo_layout">#LOGO(yeon)</span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;/
+                  <span class="motion">#Motion graphic(J-hope)</span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;&nbsp;&nbsp;<span
+                    class="ad"
                     >#AD(poster, banner)</span
                   >&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;<span class="leaflet"
                     >#leaflet(exhibition)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;<span class="character"
-                    >#character</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/
-                  <span class="motion">#Motion graphic(J-hope)</span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;/
-                  <span class="logo_layout">#LOGO(yeon)</span
                   >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<span
                     class="pakage"
                     >#pakage(homigot)</span
@@ -707,6 +706,20 @@
               <div class="chapter">
                 <div class="part03_mslide">
                   <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div><img src="./IMAGE/sect03_04.gif" alt="hobak" /></div>
+                      <div><p>자세히보기</p></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div><img src="./IMAGE/sect03_06.png" alt="logo" /></div>
+                      <div><p>자세히보기</p></div>
+                    </div>
+                    <div onclick="showVideoPopup2()" class="swiper-slide">
+                      <div>
+                        <img src="./IMAGE/sect03_05.png" alt="onthestreet" />
+                      </div>
+                      <div><p>자세히보기</p></div>
+                    </div>
                     <div class="swiper-slide">
                       <div>
                         <img src="./IMAGE/sect03_01.png" alt="miss_dior" />
@@ -725,20 +738,7 @@
                       </div>
                       <div><p>자세히보기</p></div>
                     </div>
-                    <div class="swiper-slide">
-                      <div><img src="./IMAGE/sect03_04.gif" alt="hobak" /></div>
-                      <div><p>자세히보기</p></div>
-                    </div>
-                    <div onclick="showVideoPopup2()" class="swiper-slide">
-                      <div>
-                        <img src="./IMAGE/sect03_05.png" alt="onthestreet" />
-                      </div>
-                      <div><p>자세히보기</p></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div><img src="./IMAGE/sect03_06.png" alt="logo" /></div>
-                      <div><p>자세히보기</p></div>
-                    </div>
+
                     <div class="swiper-slide">
                       <div>
                         <img src="./IMAGE/sect03_08.png" alt="homigot" />
@@ -759,60 +759,6 @@
                 <!-- MOBILE POPUP -->
                 <div class="mobile">
                   <div class="popup_box01 m_popup">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="./IMAGE/dior pop01.png" alt="m_dior01" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./IMAGE/dior pop02.png" alt="m_dior02" />
-                      </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <div class="btn_close">
-                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                    </div>
-                  </div>
-                  <div class="popup_box02 m_popup">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="./IMAGE/sakari pop01.png" alt="w_sakari01" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./IMAGE/sakari pop02.png" alt="w_sakari02" />
-                      </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <div class="btn_close">
-                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                    </div>
-                  </div>
-                  <div class="popup_box03 m_popup">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img
-                          src="./IMAGE/exhibition pop01.png"
-                          alt="w_exhibition01"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./IMAGE/exhibition pop02.png"
-                          alt="w_exhibition02"
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <div class="btn_close">
-                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                    </div>
-                  </div>
-                  <div class="popup_box04 m_popup">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <img src="./IMAGE/HOBAK pop01.png" alt="m_hobak01" />
@@ -840,24 +786,7 @@
                       <img src="./IMAGE/icon_close.svg" alt="btn_close" />
                     </div>
                   </div>
-                  <div id="video-container" class="popup_box05 m_popup2">
-                    <div>
-                      <iframe
-                        id="video-iframe"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/WFtP5rCwwHY"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                    <div onclick="hideVideoPopup2()" class="btn_close">
-                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
-                    </div>
-                  </div>
-                  <div class="popup_box06 m_popup">
+                  <div class="popup_box02 m_popup">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <img src="./IMAGE/LOGO pop01.png" alt="m_logo01" />
@@ -882,6 +811,78 @@
                       <img src="./IMAGE/icon_close.svg" alt="btn_close" />
                     </div>
                   </div>
+                  <div id="video-container" class="popup_box03 m_popup2">
+                    <div>
+                      <iframe
+                        id="video-iframe"
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/WFtP5rCwwHY"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <div onclick="hideVideoPopup2()" class="btn_close">
+                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                    </div>
+                  </div>
+                  <div class="popup_box04 m_popup">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./IMAGE/dior pop01.png" alt="m_dior01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./IMAGE/dior pop02.png" alt="m_dior02" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="btn_close">
+                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                    </div>
+                  </div>
+                  <div class="popup_box05 m_popup">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./IMAGE/sakari pop01.png" alt="w_sakari01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./IMAGE/sakari pop02.png" alt="w_sakari02" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="btn_close">
+                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                    </div>
+                  </div>
+                  <div class="popup_box06 m_popup">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="./IMAGE/exhibition pop01.png"
+                          alt="w_exhibition01"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="./IMAGE/exhibition pop02.png"
+                          alt="w_exhibition02"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="btn_close">
+                      <img src="./IMAGE/icon_close.svg" alt="btn_close" />
+                    </div>
+                  </div>
+
                   <div class="popup_box07 m_popup">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">

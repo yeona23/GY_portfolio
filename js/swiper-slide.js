@@ -39,7 +39,9 @@ var swiper04 = new Swiper(".page-scroll", {
   freeMode: true,
   scrollbar: {
     el: ".swiper-scrollbar",
+    hide: false,
     draggable: true,
+    clickable: true,
   },
   // mousewheel: true,
 });
